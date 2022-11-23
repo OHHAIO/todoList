@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import { getMember } from "./members";
 
 const app = express();
 
@@ -17,6 +18,10 @@ const sendData: Data = {
 app.get("/get", (req: Request, res: Response) => {
   console.log(`send Data ::: ${sendData}`);
   res.send(sendData);
+});
+
+app.get("/member", (req: Request, res: Response) => {
+  res.send(getMember());
 });
 
 app.listen(5000, () => {
