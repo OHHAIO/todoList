@@ -2,17 +2,23 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import path from "path";
 import webpack from "webpack";
 const prod = process.env.NODE_ENV === "production";
+const __dirname = path.resolve();
 
-module.exports = {
+const config = {
   mode: prod ? "production" : "development",
 
   devtool: prod ? "hidden-source-map" : "eval",
   devServer: {
+    historyApiFallback: true, // react router
     port: 5555,
   },
   entry: "./client/client.tsx",
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
+    alias: {
+      "@hooks": path.resolve(`${__dirname}/client`, "hooks"),
+      "@pages": path.resolve(`${__dirname}/client`, "pages"),
+    },
   },
 
   module: {
@@ -42,3 +48,5 @@ module.exports = {
     }),
   ],
 };
+
+export default config;

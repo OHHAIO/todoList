@@ -13,7 +13,13 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "outDir": "./dist",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": {
+      "@hooks/*": ["client/hooks/*"],
+      "@components/*": ["client/components/*"],
+      "@layouts/*": ["client/layouts/*"],
+      "@pages/*": ["client/pages/*"]
+    }
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx"]
