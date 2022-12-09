@@ -1,6 +1,6 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
-const webpack = require("webpack");
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import path from "path";
+import webpack from "webpack";
 const prod = process.env.NODE_ENV === "production";
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
   devServer: {
     port: 5555,
   },
-  entry: "./client/src/index.tsx",
+  entry: "./client/client.tsx",
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
@@ -38,7 +38,7 @@ module.exports = {
       React: "react",
     }),
     new HtmlWebpackPlugin({
-      template: "./client/src/index.html",
+      template: "./client/index.html",
     }),
   ],
 };

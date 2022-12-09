@@ -1,5 +1,5 @@
-import React from "react";
-import "../styles/components/footer.scss";
+import React, { FC } from "react";
+import "./styles.scss";
 
 interface ICreatedBy {
   name: string;
@@ -8,7 +8,7 @@ interface ICreatedBy {
   email: string;
 }
 
-const Footer = () => {
+const Footer: FC = () => {
   const createdBy: Array<ICreatedBy> = [
     {
       name: "KIM SOYEON",
