@@ -1,7 +1,51 @@
 .signUp {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 100%;
-  background-color: red;
+  height: 100vh;
+
+  &__form {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 0.2rem solid black;
+
+    input {
+      width: 30rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      outline: none;
+      border: 0.2rem solid black;
+
+      &:focus {
+        border: 0.2rem solid red;
+        outline: none;
+      }
+
+      & + input {
+        margin-top: 2rem;
+      }
+    }
+
+    button[type="submit"] {
+      width: 30rem;
+      height: 3rem;
+      margin-top: 2rem;
+      border-radius: 0.5rem;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      border: none;
+      &:focus {
+        background-color: cornflowerblue;
+        outline: none;
+      }
+      &:hover {
+        background-color: cornflowerblue;
+      }
+    }
+  }
 }
