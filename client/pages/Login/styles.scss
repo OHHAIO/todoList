@@ -1,4 +1,4 @@
-.signUp {
+.login {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,5 +58,11 @@
     margin-top: 1rem;
     font-size: 1.2rem;
     color: red;
+  }
+
+  &__signUp {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
   }
 }
